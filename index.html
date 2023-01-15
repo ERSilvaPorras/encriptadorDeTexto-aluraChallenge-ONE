@@ -11,7 +11,7 @@
   <!-- Normalize CSS -->
   <link rel="stylesheet" href="./assets/css/normalize.css">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +20,29 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <script src="./assets/js/index.js"></script>
+  <main class="main-container">
+    <img class="logo" src="./assets/img/logo-alura.png" alt="logo alura">
+    <section class="container">
+      <textarea class="text" name="text" id="text" spellcheck="false" placeholder="Ingrese texto aqui"></textarea>
+      <p class="info-text">
+        <span class="material-symbols-outlined icon-image">info</span>Solo letras minúsculas y sin acentos.
+      </p>
+      <div class="buttons">
+        <button class="btn btn-encrypt" value="encrypt">
+          <span class="material-symbols-outlined icon-image">lock</span>Encriptar
+        </button>
+        <button class="btn btn-decrypt" value="decrypt">
+          <span class="material-symbols-outlined icon-image">lock_open</span>Desencriptar
+        </button>
+      </div>
+    </section>
+    <section class="container-copy">
+      <label class="encrypt-text-label"></label>
+      <button class="btn btn-copy" value="copy">
+        <span class="material-symbols-outlined icon-image">content_copy</span>Copiar
+      </button>
+    </section>
+  </main>
+  <script src="./assets/js/index.js"></script>
 </body>
 </html>
