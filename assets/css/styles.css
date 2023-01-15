@@ -1,8 +1,244 @@
-
 :root {
     --first-color: #232931;
-}
-
-body {
+    --second-color: #393e46;
+    --third-color: #132743;
+    --fourth-color: #4477ac;
+    --fifth-color: #fcfcfc;
+    --dosis-ff: "Dosis"; /**/
+    --maven-pro-ff: "Maven Pro"; /**/
+    --montserrat-ff: "Montserrat"; /**/
+    --poiret-one-ff: "Poiret One"; /**/
+    --quantico-ff: "Quantico"; /**/
+    /* --rajdhani-ff: "Rajdhani";
+    --righteous-ff: "Righteous";
+    --barlow-ff: "Barlow";
+    --chakra-petch-ff: "Chakra Petch";
+    --nunito-ff: "Nunito";
+    --roboto-mono-ff: "Roboto Mono";
+    --bebas-neue-ff: "Bebas Neue"; */
+  }
+  
+  body {
+    background-color: var(--fourth-color);
+    position: relative;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+  }
+  
+  .logo {
+    height: 60px;
+    margin-bottom: 1%;
+    width: 60px;
+  }
+  
+  .title {
+    font-family: var(--montserrat-ff);
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin: 1rem auto;
+    text-align: center;
+  }
+  
+  .container {
+    height: 100vh;
+    margin: auto;
+    width: 90%;
+  }
+  
+  .text {
+    background-color: var(--fourth-color);
+    border: none;
+    color: var(--third-color);
+    display: block;
+    font-size: 2rem;
+    font-family: var(--dosis-ff);
+    font-weight: 400;
+    height: 50vh;
+    padding: 3%;
+    margin: auto;
+    resize: none;
+    width: 94%;
+  }
+  
+  .text::placeholder {
+    color: var(--first-color);
+    font-family: var(--dosis-ff);
+  }
+  
+  .text:focus {
+    outline: none;
+  }
+  
+  .info-text {
+    display: flex;
+    color: var(--first-color);
+    font-family: var(--maven-pro-ff);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    align-items: center;
+  }
+  
+  .icon-image {
+    margin-right: 0.5rem;
+  }
+  
+  .buttons {
+    margin: auto;
+    padding: 2rem auto;
+  }
+  
+  .btn {
+    align-items: center;
+    background-color: var(--fifth-color);
+    border: 2px solid var(--first-color);
+    border-radius: 24px;
+    color: var(--first-color);
+    display: flex;
+    font-family: var(--montserrat-ff);
+    font-size: 1rem;
+    height: 60px;
+    justify-content: center;
+    margin: 2rem auto auto auto;
+    padding: 1rem 2rem;
+    width: 100%;
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+  }
+  
+  .btn:active {
     background-color: var(--first-color);
-}
+    color: var(--fifth-color);
+  }
+  
+  .btn-encrypt {
+    background-color: var(--first-color);
+    color: var(--fifth-color);
+  }
+  
+  .btn-encrypt:active {
+    background-color: var(--fifth-color);
+    color: var(--first-color);
+  }
+  
+  .container-copy {
+    background-color: var(--fifth-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 24px;
+    margin: 20% auto auto auto;
+    padding: 4%;
+    width: 82%;
+  }
+  
+  .encrypt-text-label {
+    display: flex;
+    font-size: 1.5rem;
+    font-family: var(--dosis-ff);
+  }
+  
+  .btn-copy {
+    width: 100%;
+    visibility: collapse;
+  }
+  
+  .content-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .content-copy img {
+    width: 80%;
+    height: auto;
+  }
+  
+  .content-copy h3 {
+    font-size: 1.4rem;
+  }
+  .content-copy p {
+    font-size: .9rem;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .main-container {
+      padding: 4% 10%;
+    }
+  
+    .title {
+      font-size: 5rem;
+    }
+    .text {
+      font-size: 3.5rem;
+    }
+  
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .btn {
+      margin: 0 0;
+      width: 45%;
+    }
+  
+    .container-copy {
+      margin: auto auto;
+    }
+    .btn-copy {
+      margin: 4% auto auto auto;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .main-container {
+      /* align-content: center; */
+      display: flex;
+      flex-direction: row;
+      height: 92vh;
+      justify-content: space-between;
+      margin: 0;
+      padding: 1%;
+      width: 96%;
+    }
+  
+    .container {
+      align-content: space-around;
+      flex-direction: column;
+      height: auto;
+      margin: auto 1%;
+      padding: 1%;
+      width: 65%;
+    }
+    .content-copy {
+      padding: 1%;
+    }
+    .container-copy {
+      align-content: space-between;
+      display: flex;
+      flex-direction: column;
+      padding: 1%;
+      padding-top: 2%;
+      margin: 2% 1%;
+      width: 20%;
+    }
+  
+    .encrypt-text-label {
+      display: block;
+      font-size: 1.1rem;
+      height: 90%;
+      padding: 2rem auto;
+    }
+    .btn-copy {
+      margin: 0 auto;
+      bottom: 2rem;
+      width: 100%;
+  
+    }
+  }
